@@ -8,7 +8,12 @@ const connect = function () {
 
   conn.setEncoding(`utf8`);
 
-  conn.on('data', (data) => {
+  conn.on(`connect`, () => {
+    conn.write(`Name: WH`);
+    console.log(`I am connected`)
+  })
+
+  conn.on(`data`, (data) => {
     console.log(data)
   })
 
