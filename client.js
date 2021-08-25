@@ -10,6 +10,9 @@ const connect = function () {
 
   conn.on(`connect`, () => {
     conn.write(`Name: WH`);
+
+    // setInterval(() => { conn.write(`Move: up`) }, 50);
+
     console.log(`I am connected`)
   })
 
@@ -21,7 +24,5 @@ const connect = function () {
 };
 
 console.log(`connecting...`);
-
-connect();
 
 module.exports = connect;
